@@ -578,7 +578,7 @@ margin-bottom: 15px;
 	}
 }
 @media screen and (max-width:1280px) {
-	section {
+	header, section {
 		min-height: unset;
 	}
 	.hiw__wrapper,
@@ -673,9 +673,6 @@ margin-bottom: 15px;
 	}
 	.element-waves {
 		width: 200%;
-	}
-	header {
-		height: auto;
 	}
 }
 @media screen and (max-width:380px) {
