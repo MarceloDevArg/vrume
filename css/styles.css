@@ -216,6 +216,41 @@ h3 {
 	transform: rotate(-405deg);
 }
 
+/* Burger menu on desktop till we have all the pages working, these lines go in media query 1440px */
+.menu-button-container {
+	display: flex;
+}
+.nav {
+  display: block;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 1);
+  padding-top: 100px;
+  z-index: 10;
+  transform: translateX(-105%);
+  transition: all .5s ease-in-out;
+}
+.nav > li {
+  padding: 1rem;
+  overflow: hidden;
+  text-align: center;
+}
+.nav > li a {
+  font-size: 32px;
+}
+#menu-toggle:checked ~ 	.nav {
+  transform: translateX(0%);
+  opacity: 1;
+}
+#menu-toggle:checked ~ .menu-button-container {
+  z-index: 11;
+}
+/* END */
+
 /* What we do */
 .wwd {
 	position: relative;
@@ -468,7 +503,7 @@ footer::before {
 
 .footer__content {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: 500px auto;
 	margin-top: 30px;
 	gap: 30px;
 }
@@ -538,38 +573,6 @@ margin-bottom: 15px;
 	.header__content {
 		padding: 100px 50px 0;
 	}
-	.menu-button-container {
-	  	display: flex;
-	}
-	.nav {
-		display: block;
-		opacity: 0;
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: rgba(0, 0, 0, 1);
-		padding-top: 100px;
-		z-index: 10;
-		transform: translateX(-105%);
-		transition: all .5s ease-in-out;
-	}
-	.nav > li {
-		padding: 1rem;
-		overflow: hidden;
-		text-align: center;
-	}
-	.nav > li a {
-		font-size: 32px;
-	}
-	#menu-toggle:checked ~ 	.nav {
-		transform: translateX(0%);
-		opacity: 1;
-	}
-	#menu-toggle:checked ~ .menu-button-container {
-		z-index: 11;
-	}
 	.wwd .slick-slide {
 		min-height: 300px;
 	}
@@ -615,6 +618,13 @@ margin-bottom: 15px;
 	.footer__wrapper {
 		padding: 70px 50px 0;
 	}
+	.footer__content {
+		max-width: 500px;
+		grid-template-columns: 100%;
+	}
+	.footer__social {
+		padding-left: 0;
+	}
 }
 @media screen and (max-width:720px) {
 	.wwd .slick-slide {
@@ -622,12 +632,6 @@ margin-bottom: 15px;
 	}
 	.tes .slick-slide {
 		min-height: 200px;
-	}
-	.footer__content {
-		grid-template-columns: 100%;
-	}
-	.footer__social {
-		padding-left: 0;
 	}
 	.header__btn {
 		grid-auto-flow: row;
