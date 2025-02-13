@@ -690,3 +690,8 @@ margin-bottom: 15px;
 		padding: 20px 10px;
 	}
 }
+@media screen and (max-width:980px) and (max-height:420px) and (orientation: landscape) {
+	header, section {
+		min-height: 135vh;
+	}
+}
