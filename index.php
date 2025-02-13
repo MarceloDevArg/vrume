@@ -215,7 +215,7 @@
                         5 Edinburgh Rd S Guelph, Ont N1H 5N8,<br />
                         Canada<br />
                         <br />
-                        Copyright © 2024 Vrume. All rights reserved.
+                        Copyright © <?= echo date('Y') ?> Vrume. All rights reserved.
                     </p>
                 </div>
 
