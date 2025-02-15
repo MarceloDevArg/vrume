@@ -1,13 +1,13 @@
 /* Header */
 body.signup header {
 	width: 100%;
-	height: auto;
+	min-height: auto;
 	position: relative;
 }
 body.signup .header__content {
 	width: 100%;
     max-width: unset;
-	height: auto;
+	min-height: auto;
 	padding: 20px 100px;
 }
 
