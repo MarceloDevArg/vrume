@@ -1,0 +1,10 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^advertisers/(.*)$                      /advertisers-buy-traffic [R=301,NC,L]
+RewriteRule ^advertisers-buy-traffic                advertisers.php?page=1
+RewriteRule ^publishers-sell-us-your-traffic        publishers.php?page=1
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$
+RewriteRule ^(.*)$ https://%1/$1 [R=301,NC,L]

@@ -1,0 +1,6 @@
+FTP ACCOUNT INFORMATION
+-----------------------
+Hostname: srv.vrume.com Port(s): 21
+Username: ftp_vrumecom
+Password: SJIRCclcFbEBNMim
+Chroot:   /home/httpd/html/vrume.com/public_html

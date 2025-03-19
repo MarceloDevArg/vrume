@@ -1,17 +1,26 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
-    <head>
+<head>
         <meta charset="UTF-8">
-        <meta name="robots" content="noindex, nofollow" />
 		<title>Vrume | We Drive Traffic and Sales!</title>
         <meta name="viewport" content="user-scalable=false, initial-scale=1.0, maximum-scale=1.0">
         <meta content="" name="keywords">
         <meta content="" name="description">
 		<meta name="theme-color" content="#000000">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 		<link rel="stylesheet" href="https://use.typekit.net/sme3lqw.css">
         <link rel="stylesheet" type="text/css" href="css/slick.css">
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
         <script>window.pipedriveLeadboosterConfig = {base: 'leadbooster-chat.pipedrive.com',companyId: 4773365,playbookUuid: 'c4b0fce6-2920-43ef-8c7f-6df1938c472b',version: 2};(function () {var w = window;if (w.LeadBooster) {console.warn('LeadBooster already exists');} else {w.LeadBooster = {q: [],on: function (n, h) {this.q.push({ t: 'o', n: n, h: h });},trigger: function (n) {this.q.push({ t: 't', n: n });},};}})();</script><script src="https://leadbooster-chat.pipedrive.com/assets/loader.js" async></script>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7V0KBWG26W"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-7V0KBWG26W');
+        </script>
 </head>
 
 <body>
@@ -22,23 +31,9 @@
 		<div class="header__content">
 
             <div class="header__top">
-                <img src="images/vrume-logo-white.png" alt="">
-
-                <input id="menu-toggle" type="checkbox" />
-                <label class='menu-button-container' for="menu-toggle"><div class='menu-button'></div></label>
-
-                <ul class="nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="advertisers.html">Advertisers</a></li>
-                    <li><a href="publishers.html">Publisher</a></li>
-                    <li><a href="https://admin.vrumeads.com/login">Log In</a></li>
-                    <!--
-                    <li><a href="">Design</a></li>
-                    <li><a href="">Case Studies</a></li>
-                    <li><a href="">Domains for sale</a></li>
-                    -->
-                    <li><a href="#" data-id="contact">Contact us</a></li>
-                </ul>
+            <?php
+                include ('common/nav.php');
+            ?>
             </div>
 
 			<div class="header__copy">
@@ -51,8 +46,8 @@
                     with campaigns designed for impact.</h2>
 
                 <div class="header__btn">
-                    <a href="advertisers.html" class="cta">BUY TRAFFIC</a>
-                    <a href="publishers.html" class="cta active">SELL TRAFFIC</a>
+                    <a href="/advertisers-buy-traffic" class="cta">BUY TRAFFIC</a>
+                    <a href="/publishers-sell-us-your-traffic" class="cta active">SELL TRAFFIC</a>
                 </div>
             </div>
 		</div>
@@ -86,8 +81,8 @@
                 <p>At Vrume.com, we ensure your message connects with the right people at the right time. Through advanced targeting and high-performing ad placements like email, push, banner, and landing page traffic, we help you cut through the noise.</p>
             </div>
             <div>
-                <h1>REACH YOUR IDEAL AUDIENCE WITH VRUME.COM</h1>
-                <p>At Vrume.com, we ensure your message connects with the right people at the right time. Through advanced targeting and high-performing ad placements like email, push, banner, and landing page traffic, we help you cut through the noise.</p>
+                <h1>Your success is our top priority!</h1>
+                <p>With over 25 years of expertise in performance marketing, we have a deep understanding of how to drive high-quality traffic, optimize campaigns, and maximize conversions. Our data-driven approach, industry insights, and commitment to innovation ensure that we deliver measurable results for our partners.</p>
             </div>
         </div>
 
@@ -204,22 +199,9 @@
 
                 <div class="pipedriveWebForms" data-pd-webforms="https://webforms.pipedrive.com/f/30XwHR3yZByfby67E9hb6jgpf4lqMRMxWYRB2s1l5TTooqhcHaSSHWpoW3GraLl1p"><script src="https://webforms.pipedrive.com/f/loader"></script></div>
 
-                <div class="footer__social">
-                    <h3>Social</h3>
-                    <ul>
-                        <li><a href="https://www.facebook.com/vrumeads" target="_blank"><img src="images/fb.png" alt=""></a></li>
-                        <li><a href="https://x.com/vrumeads" target="_blank"><img src="images/tw.png" alt=""></a></li>
-                        <li><a href="https://www.instagram.com/vrumeads/" target="_blank"><img src="images/ig.png" alt=""></a></li>
-                        <li><a href="https://www.linkedin.com/company/vrume/" target="_blank"><img src="images/in.png" alt=""></a></li>
-                    </ul>
-                    <p>
-                        Platform @ The Junction.<br />
-                        5 Edinburgh Rd S Guelph, Ont N1H 5N8,<br />
-                        Canada<br />
-                        <br />
-                        Copyright © 2025 Vrume. All rights reserved.
-                    </p>
-                </div>
+                <?php
+                include('common/footer_social.php');
+                ?>
 
             </div>
 
@@ -257,7 +239,8 @@
         {
 		  breakpoint: 720,
 		  settings: {
-			slidesToShow: 1
+			slidesToShow: 1,
+            centerPadding: '10px'
 		  }
 		},
         {
@@ -296,6 +279,7 @@
 
     if(contact_page) {
         goToContact();
+        document.title = "Vrume | Feel free to contact us";
     }
 </script>
 </body>

@@ -2,8 +2,7 @@
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
-        <meta name="robots" content="noindex, nofollow" />
-		<title>Sell Traffic! Become an Publisher | Vrume</title>
+		<title>Buy Traffic! Become an Advertiser | Vrume</title>
         <meta name="viewport" content="user-scalable=false, initial-scale=1.0, maximum-scale=1.0">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -12,6 +11,15 @@
         <link rel="stylesheet" type="text/css" href="css/slick.css">
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
         <link rel="stylesheet" type="text/css" href="css/signup.css">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7V0KBWG26W"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-7V0KBWG26W');
+        </script>
 </head>
 
 <body class="signup">
@@ -19,30 +27,22 @@
 	<header>
 		<div class="header__content">
             <div class="header__top">
-                <img src="images/vrume-logo-white.png" alt="">
-
-                <input id="menu-toggle" type="checkbox" />
-                <label class='menu-button-container' for="menu-toggle"><div class='menu-button'></div></label>
-
-                <ul class="nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="advertisers.html">Advertisers</a></li>
-                    <li><a href="publishers.html">Publishers</a></li>
-                    <li><a href="index.html?contact=1">Contact us</a></li>
-                </ul>
+                <?php
+                    include ('common/nav.php');
+                ?>
             </div>
 		</div>
 	</header>
 
-    <section class="adv pub">
+    <section class="adv">
         <div class="adv__wrapper">
 
             <div class="adv__copy">
-                <h1>Sell Us Your Traffic</h1>
-			    <h2>Thank you for your interest in Vrume! Please provide your company or personal details below to apply for a publisher account, and we’ll be in touch soon.</h2>
+                <h1>Buy Traffic</h1>
+			    <h2>Thank you very much for your interest in Vrume. Please fill out your company or personal details below to apply for an advertiser account with us and we will be in touch.</h2>
             </div>
 
-            <div class="pipedriveWebForms" data-pd-webforms="https://webforms.pipedrive.com/f/1rpESwJ11roLmueM5Dj8s0HUJrNnfzjKoXCpthgvBjtMxjNnthJ73EC0XnSuB2fQv"><script src="https://webforms.pipedrive.com/f/loader"></script></div>
+            <div class="pipedriveWebForms" data-pd-webforms="https://webforms.pipedrive.com/f/1I1gyaFKEH23WTCd9Ep2UBsD3nu4QVJ1C3o1EuacOItUt6a4Asag6pVLlfyS2y0Sf"><script src="https://webforms.pipedrive.com/f/loader"></script></div>
 
         </div>
 
@@ -53,22 +53,9 @@
 
             <div class="footer__content">
 
-                <div class="footer__social">
-                    <h3>Social</h3>
-                    <ul>
-                        <li><a href="https://www.facebook.com/vrumeads" target="_blank"><img src="images/fb.png" alt=""></a></li>
-                        <li><a href="https://x.com/vrumeads" target="_blank"><img src="images/tw.png" alt=""></a></li>
-                        <li><a href="https://www.instagram.com/vrumeads/" target="_blank"><img src="images/ig.png" alt=""></a></li>
-                        <li><a href="https://www.linkedin.com/company/vrume/" target="_blank"><img src="images/in.png" alt=""></a></li>
-                    </ul>
-                    <p>
-                        Platform @ The Junction.<br />
-                        5 Edinburgh Rd S Guelph, Ont N1H 5N8,<br />
-                        Canada<br />
-                        <br />
-                        Copyright © 2025 Vrume. All rights reserved.
-                    </p>
-                </div>
+            <?php
+                include('common/footer_social.php');
+            ?>
 
             </div>
 
@@ -76,6 +63,8 @@
 
         <img src="images/element-bg-waves.png" class="element-waves">
     </footer>
+
+	
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
